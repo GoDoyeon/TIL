@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./index.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <article class="block">
+      <!-- 슬라이드 부분 -->
+      <div class="slider">
+        <!-- 라디오 버튼으로 슬라이드 이동 구현 -->
+        <input type="radio" name="slide" id="slide1" checked />
+        <input type="radio" name="slide" id="slide2" />
+        <input type="radio" name="slide" id="slide3" />
+        <ul id="imgholder" class="imgs">
+          <li>
+            <img src="./img/1.png" alt="" />
+          </li>
+          <li>
+            <img src="./img/2.png" alt="" />
+          </li>
+          <li>
+            <img src="./img/3.png" alt="" />
+          </li>
+        </ul>
+        <!-- 실제 클릭 이동 구현 => 하단의 라벨 태그 (불릿) -->
+        <div class="bullets">
+          <label for="slide1">&nbsp;</label>
+          <label for="slide2">&nbsp;</label>
+          <label for="slide3">&nbsp;</label>
+        </div>
+      </div>
+    </article>
+  </body>
+</html>
