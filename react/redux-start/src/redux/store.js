@@ -1,20 +1,26 @@
-import { createStore } from 'redux';
+import { applyMiddleware, createStore } from 'redux';
 import todoApp from './modules/reducer';
+import { composeWithDevTools } from 'redux-devtools-extension';
+import thunk from 'redux-thunk';
+import promise from 'redux-promise-middleware';
+import history from '../history';
+import { routerMiddleware } from 'connected-react-router';
+import createSagaMiddleWare from 'redux-saga';
+import rootSaga from './modules/rootSaga';
 
-function middleware1(store) {
-  console.log('middleware1', 0);
+const sagaMiddleWare = createSagaMiddleWare();
 
-  return (next) => {
-    console.log('middleware1', 1);
-    return (action) => {
-      console.log('middleware1', 2);
-      const returnValue = next(action);
-      console.log('middleware1', 3);
-
-      return returnValue;
-    };
-  };
-}
-const store = createStore(todoApp, middleware1());
+const store = createStore(
+  todoApp,
+  composeWithDevTools(
+    applyMiddleware(
+      thunk.withExtraArgument({ history }),
+      promise,
+      routerMiddleware(history),
+      sagaMiddleWare,
+    ),
+  ),
+);
+sagaMiddleWare.run(rootSaga);
 
 export default store;
