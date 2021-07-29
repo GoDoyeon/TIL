@@ -1,7 +1,11 @@
 import { useCallback } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import UserList from '../components/UserList';
-import { getUsersFail, getUsersStart, getUsersSuccess } from '../redux/actions';
+import {
+  getUsersFail,
+  getUsersStart,
+  getUsersSuccess,
+} from '../redux/modules/users';
 import axios from 'axios';
 
 export default function UserListContainer() {

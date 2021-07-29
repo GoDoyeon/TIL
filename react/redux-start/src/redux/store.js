@@ -1,5 +1,5 @@
 import { createStore } from 'redux';
-import todoApp from './reducers/reducer';
+import todoApp from './modules/reducer';
 
 function middleware1(store) {
   console.log('middleware1', 0);
