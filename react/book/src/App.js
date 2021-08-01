@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { bookSearch } from './api';
 import Item from './Item';
-//import './App.css';
+import './App.css';
 
 const App = (props) => {
   // 기초 데이터 state, 검색어 state, 쿼리 state를 생성한다.
@@ -39,33 +39,35 @@ const App = (props) => {
 
     const { data } = await bookSearch(params);
     if (reset) {
-      console.log('검색 결과');
       setBooks(data.documents);
     } else {
-      console.log('검색 x');
-
       setBooks(books.concat(data.documents));
     }
     console.log(data);
   };
   return (
     <div className="container">
-      <input
-        type="search"
-        placsholder="검색어를 입력 하세요."
-        name="query"
-        onKeyDown={onEnter} // enter
-        onChange={onTextUpdate} // change
-        value={text} // view
-        className="input_search"
-      />
+      <h1 className="title">LIBRARY</h1>
+      <div className="searchBox">
+        <input
+          type="search"
+          placsholder="검색어를 입력해 주세요."
+          name="query"
+          onKeyDown={onEnter} // enter
+          onChange={onTextUpdate} // change
+          value={text} // view
+          className="input_search"
+        />
+      </div>
       <ul>
         {books.map((book, index) => (
           <Item
             key={index}
             thumbnail={book.thumbnail}
             title={book.title}
-            contents={book.contents}
+            authors={book.authors}
+            price={book.price}
+            publisher={book.publisher}
           />
         ))}
       </ul>

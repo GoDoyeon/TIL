@@ -10,7 +10,9 @@ const Item = (props) => {
       </dl>
       <dd>
         <h3>{props.title}</h3>
-        <p>{props.contents}</p>
+        <p>{props.authors}</p>
+        <p>{props.price}</p>
+        <p>{props.publisher}</p>
       </dd>
     </li>
   );
