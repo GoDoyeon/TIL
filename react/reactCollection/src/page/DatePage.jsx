@@ -1,20 +1,21 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import Calendar from '../components/Date/Calendar';
+import TeamDate from '../components/Date/TeamDate';
 const DatePage = () => {
   const [isCalendarOpen, setIsCalendarOpen] = useState(false);
   const showCalendar = () => {
+    console.log('dd');
     setIsCalendarOpen(!isCalendarOpen);
   };
   return (
     <div>
       <SearchDateWrapper
-        handleClick={showCalendar}
+        onClick={showCalendar}
         readOnly
         placeholder="8월 6일 (금) - 8월 7일(토) | 1박"
-        // onClick={showDatePicker}
       ></SearchDateWrapper>
-      <Calendar />
+      <Calendar showCalendar={showCalendar} />
 
       {/* <button onClick={showCalendar}>qq</button>
       <Calendar showCalendar={showCalendar} /> */}

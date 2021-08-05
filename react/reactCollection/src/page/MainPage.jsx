@@ -23,6 +23,12 @@ const MainPage = () => {
           </h2>
           <p>캘린더</p>
         </li>
+        <li>
+          <h2>
+            <a href="/dropdown">/dropdown</a>
+          </h2>
+          <p>드롭다운</p>
+        </li>
       </ul>
     </div>
   );
