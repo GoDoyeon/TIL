@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Raleway:400,500,800);
+      figure.snip1283 {
+        font-family: 'Raleway', Arial, sans-serif;
+        color: #fff;
+        position: relative;
+        overflow: hidden;
+        margin: 10px;
+        min-width: 230px;
+        max-width: 315px;
+        max-height: 220px;
+        width: 100%;
+        color: #ffffff;
+        text-align: left;
+        background-color: #07090c;
+        font-size: 16px;
+        -webkit-perspective: 50em;
+        perspective: 50em;
+      }
+      figure.snip1283 * {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        -webkit-transition: all 0.6s ease;
+        transition: all 0.6s ease;
+      }
+      figure.snip1283 img {
+        opacity: 1;
+        width: 100%;
+        -webkit-transform-origin: 50% 0%;
+        -ms-transform-origin: 50% 0%;
+        transform-origin: 50% 0%;
+      }
+      figure.snip1283 figcaption {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        -webkit-transform: rotateX(90deg);
+        transform: rotateX(90deg);
+        -webkit-transform-origin: 50% 100%;
+        -ms-transform-origin: 50% 100%;
+        transform-origin: 50% 100%;
+        z-index: 1;
+        opacity: 0;
+        padding: 20px 30px;
+      }
+      figure.snip1283 h3,
+      figure.snip1283 p {
+        line-height: 1.5em;
+      }
+      figure.snip1283 h3 {
+        margin: 0;
+        font-weight: 800;
+        text-transform: uppercase;
+      }
+      figure.snip1283 p {
+        font-size: 0.8em;
+        font-weight: 500;
+        margin: 0 0 15px;
+      }
+      figure.snip1283 .read-more {
+        border: 2px solid #ffffff;
+        padding: 0.5em 1em;
+        font-size: 0.8em;
+        text-decoration: none;
+        color: #ffffff;
+        display: inline-block;
+      }
+      figure.snip1283 .read-more:hover {
+        background-color: #ffffff;
+        color: #000000;
+      }
+      figure.snip1283:hover img,
+      figure.snip1283.hover img {
+        -webkit-transform: rotateX(-90deg);
+        transform: rotateX(-90deg);
+        opacity: 0;
+      }
+      figure.snip1283:hover figcaption,
+      figure.snip1283.hover figcaption {
+        -webkit-transform: rotateX(0deg);
+        transform: rotateX(0deg);
+        opacity: 1;
+        -webkit-transition-delay: 0.2s;
+        transition-delay: 0.2s;
+      }
+    </style>
+  </head>
+  <body>
+    <figure class="snip1283">
+      <img
+        src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample70.jpg"
+        alt="sample70"
+      />
+      <figcaption>
+        <h3>Sue Shei</h3>
+        <p>
+          The strength to change what I can, the inability to accept what I
+          can't and the incapacity to tell the difference.
+        </p>
+        <a href="#" class="read-more">Read More</a>
+      </figcaption>
+    </figure>
+    <figure class="snip1283 hover">
+      <img
+        src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample71.jpg"
+        alt="sample71"
+      />
+      <figcaption>
+        <h3>Indigo Violet</h3>
+        <p>
+          Sometimes I think the surest sign that intelligent life exists
+          elsewhere in the universe is that none of it has tried to contact us.
+        </p>
+        <a href="#" class="read-more">Read More</a>
+      </figcaption>
+    </figure>
+    <figure class="snip1283">
+      <img
+        src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample76.jpg"
+        alt="sample76"
+      />
+      <figcaption>
+        <h3>Lurch Schpellchek</h3>
+        <p>
+          Dad buried in landslide! Jubilant throngs fill streets! Stunned father
+          inconsolable - demands recount!
+        </p>
+        <a href="#" class="read-more">Read More</a>
+      </figcaption>
+    </figure>
+  </body>
+</html>
