@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <dl class="tabs">
+      <dt class="tabs__item tabs__item--active">Tab 1</dt>
+      <dd class="tabs__body">
+        <div class="tabs__content">
+          This is a semantic tab box with some fancy animations.
+        </div>
+      </dd>
+
+      <dt class="tabs__item">Tab 2</dt>
+      <dd class="tabs__body">
+        <div class="tabs__content">It's super exciting.</div>
+      </dd>
+
+      <dt class="tabs__item">Tab 3</dt>
+      <dd class="tabs__body">
+        <div class="tabs__content">
+          <p>
+            It relies on jQuery, and it can only be a fixed height due to the
+            absolute positioning, but whatever. That's the price you're paying
+            for sensible markup I guess.
+          </p>
+          <p>Check out my multiple paragraphs.</p>
+        </div>
+      </dd>
+    </dl>
+
+    <dl class="tabs tabs--vertical">
+      <dt class="tabs__item tabs__item--active">Tab 1</dt>
+      <dd class="tabs__body">
+        <div class="tabs__content">This is the same thing, but vertical.</div>
+      </dd>
+
+      <dt class="tabs__item">Tab 2</dt>
+      <dd class="tabs__body">
+        <div class="tabs__content">
+          Same caveats as before, but I'll be damned if it isn't pretty.
+        </div>
+      </dd>
+
+      <dt class="tabs__item">Tab 3</dt>
+      <dd class="tabs__body">
+        <div class="tabs__content">Why are you reading these anyway</div>
+      </dd>
+    </dl>
+  </body>
+  <script src="index.js"></script>
+</html>
